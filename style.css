@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    overflow-y: scroll;            
+    scrollbar-width: 0px;         
+}
+
+body::-webkit-scrollbar {
+    display: none;                
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+
+.site-header {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out; 
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #8e44ad;
+    text-align: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.site-header .logo:hover {
+    transform: scale(1.1);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    color: #ccc;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #fff;
+    background-color: #8e44ad;
+}
+
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)) ;
+    background-position: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    color: #fff; 
+}
+
+#hero h2 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.3rem;
+    color: #eee;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #8e44ad;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #9b59b6;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    font-size: 2rem;
+    color: #8e44ad;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    background-color: #1a1a1a;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section:nth-child(even) {
+    background-color: #222;
+}
+
+h3 {
+    font-size: 2.5rem;
+    color: #8e44ad;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.service {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 250px;
+    margin: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service h4 {
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.portfolio-item {
+    width: 30%;
+    min-width: 250px;
+    margin: 15px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.03);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-item p {
+    padding: 10px;
+    font-weight: bold;
+    color: #eee;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 30px;
+    text-align: left;
+    color: #ccc;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h4 {
+    color: #f39c12;
+    margin-bottom: 5px;
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #2b2b2b;
+    border-left: 5px solid #8e44ad;
+    margin: 20px auto;
+    padding: 15px 20px;
+    max-width: 800px;
+    border-radius: 5px;
+    color: #e0e0e0;
+}
+
+#technologies ul {
+    text-align: left;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #eee;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #8e44ad;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #9b59b6;
+}
+
+section:last-child {
+    background-color: #121212;
+}
+
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .services-list,
+    .portfolio-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service,
+    .portfolio-item {
+        width: 90%;
+    }
+
+    .faq-list,
+    form {
+        width: 90%;
+    }
+}
+
+/* ✅ BURGER MENU STYLES */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* ✅ Responsive layout & typography */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-nav ul {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #111;
+        flex-direction: column;
+        width: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+        display: none;
+        z-index: 1001;
+    }
+
+    .main-nav ul.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .main-nav ul li {
+        margin: 0;
+        width: 100%;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        color: #ccc;
+        border-bottom: 1px solid #222;
+    }
+
+    .site-header .logo {
+        margin: 0;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .services-list,
+    .portfolio-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service,
+    .portfolio-item {
+        width: 90%;
+    }
+
+    .faq-list,
+    form {
+        width: 90%;
+    }
+}
+
+/* ✅ Évite les débordements */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
