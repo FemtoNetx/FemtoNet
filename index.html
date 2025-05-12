@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>FemtoNet - Création de sites web</title>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/FemtoNetx/FemtoNet/main/favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -31,16 +32,16 @@
 
 <section id="hero" class="section visible">
     <div class="container">
-        <h2>Des sites web puissants, conçus avec minutie</h2>
-        <p>FemtoNet crée des sites modernes, rapides et responsives pour les entrepreneurs, freelances et petites entreprises.</p>
-        <a href="#services" class="btn-primary">Découvrez nos services</a>
+        <h2  data-aos="fade-up">Des sites web puissants, conçus avec minutie</h2>
+        <p  data-aos="fade-up">FemtoNet crée des sites modernes, rapides et responsives pour les entrepreneurs, freelances et petites entreprises.</p>
+        <a href="#services" class="btn-primary" >Découvrez nos services</a>
     </div>
 </section>
 
 <section id="services" class="section visible">
     <div class="container">
-        <h3>Nos Services</h3>
-        <div class="services-list">
+        <h3  data-aos="fade-up">Nos Services</h3>
+        <div class="services-list" data-aos="fade-up">
             <div class="service">
                 <h4>Site vitrine</h4>
                 <p>Idéal pour présenter votre entreprise et vos services en ligne.</p>
@@ -66,9 +67,9 @@
 </section>
 
 <section id="portfolio" class="section visible">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <h3>Portfolio</h3>
-        <p>Quelques projets récents de nos clients satisfaits.</p>
+        <p >Quelques projets récents de nos clients satisfaits.</p>
         <div class="portfolio-gallery">
             <div class="portfolio-item">
                 <img src="portfolio1.jpg" alt="Restaurant moderne">
@@ -87,7 +88,7 @@
 </section>
 
 <section id="about" class="section visible">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <h3>À propos de FemtoNet</h3>
         <p>Nous sommes une petite équipe de développeurs passionnés, spécialisés dans la création de sites web performants, sécurisés et élégants. Avec plus de 5 ans d'expérience, nous avons accompagné plus de 100 clients dans leurs projets digitaux.</p>
         <h4>Notre méthode de travail :</h4>
@@ -101,18 +102,18 @@
 </section>
 
 <section id="faq" class="section visible">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <h3>Foire aux questions</h3>
         <div class="faq-list">
-            <div class="faq-item">
-                <h4>Quel est le délai pour créer un site ?</h4>
+            <div class="faq-item" data-aos="fade-up">
+                <h4">Quel est le délai pour créer un site ?</h4>
                 <p>En moyenne 2 à 3 semaines, selon la complexité du projet.</p>
             </div>
-            <div class="faq-item">
+            <div class="faq-item" data-aos="fade-up">
                 <h4>Est-ce que le site sera responsive ?</h4>
                 <p>Oui, tous nos sites sont adaptés aux mobiles et tablettes.</p>
             </div>
-            <div class="faq-item">
+            <div class="faq-item" data-aos="fade-up">
                 <h4>Quels sont vos tarifs ?</h4>
                 <p>Nos tarifs commencent à 500€ pour un site vitrine simple. Contactez-nous pour un devis personnalisé.</p>
             </div>
@@ -121,19 +122,19 @@
 </section>
 
 <section id="testimonials" class="section visible">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <h3>Ce que disent nos clients</h3>
         <blockquote>
-            “Un service impeccable, très à l'écoute et rapide. Mon site est superbe !”<br><small>— Julie, coiffeuse à domicile</small>
+            “Un service impeccable, très à l'écoute et rapide. Mon site est superbe !”<br><small>— Julie, coiffeuse à domicile</small>
         </blockquote>
         <blockquote>
-            “Grâce à FemtoNet, j’ai pu lancer ma boutique en ligne sans stress.”<br><small>— Karim, entrepreneur textile</small>
+            “Grâce à FemtoNet, j'ai pu lancer ma boutique en ligne sans stress.”<br><small>— Karim, entrepreneur textile</small>
         </blockquote>
     </div>
 </section>
 
 <section id="technologies" class="section visible">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <h3>Technologies que nous utilisons</h3>
         <p>Nous utilisons les technologies web modernes et fiables :</p>
         <ul>
@@ -146,7 +147,7 @@
 </section>
 
 <section id="contact" class="section visible">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <h3>Contactez-nous</h3>
         <p>Discutons de votre projet. Nous vous répondons sous 24h.</p>
         <form>
@@ -158,5 +159,9 @@
     </div>
 </section>
 <script src="main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
