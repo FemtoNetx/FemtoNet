@@ -11,7 +11,8 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     overflow-y: scroll;            
-    scrollbar-width: 0px;         
+    scrollbar-width: 0px;
+    cursor: url('https://cdn-icons-png.flaticon.com/512/545/545682.png') 16 16, auto;       
 }
 
 body::-webkit-scrollbar {
@@ -335,7 +336,7 @@ section:last-child {
     }
 }
 
-/* ✅ BURGER MENU STYLES */
+
 .burger {
     display: none;
     cursor: pointer;
@@ -350,7 +351,7 @@ section:last-child {
     transition: all 0.3s ease;
 }
 
-/* ✅ Responsive layout & typography */
+
 @media (max-width: 768px) {
     .site-header .container {
         flex-direction: row;
@@ -425,8 +426,12 @@ section:last-child {
     }
 }
 
-/* ✅ Évite les débordements */
 html, body {
     width: 100%;
     overflow-x: hidden;
 }
+
+.main-nav ul.active {
+    transform: translateX(0);
+}
+
